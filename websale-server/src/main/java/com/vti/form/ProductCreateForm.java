@@ -12,6 +12,7 @@ public class ProductCreateForm {
     private Double quantity;
     private Double soldQuantity;
     private Double price;
+    private Double salePrice;
     private Boolean status;
     private Integer categoryId;
 

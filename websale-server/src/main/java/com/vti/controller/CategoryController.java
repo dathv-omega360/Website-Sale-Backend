@@ -28,7 +28,7 @@ public class CategoryController {
     public Page<CategoryDTO> findAll(Pageable pageable, CategoryFilterForm form) {
         Page<Category> page = service.findAll(pageable, form);
         List<Category> categories = page.getContent();
-        List<Category> dtos = mapper.map(categories, new TypeToken<List<CategoryDTO>>(){}.getType());
+        List<CategoryDTO> dtos = mapper.map(categories, new TypeToken<List<CategoryDTO>>(){}.getType());
 
         return new PageImpl<>(dtos, pageable, page.getTotalElements());
     }
