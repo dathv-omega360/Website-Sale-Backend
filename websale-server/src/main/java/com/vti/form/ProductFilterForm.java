@@ -7,4 +7,6 @@ import lombok.Setter;
 @Setter
 public class ProductFilterForm {
     private String search;
+    private String minprice;
+    private String maxprice;
 }

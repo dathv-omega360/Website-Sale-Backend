@@ -21,7 +21,7 @@ public class CategoryDTO {
     @Getter
     @Setter
     public static class  ProductDTO{
-        @JsonProperty("tId")
+        @JsonProperty("Id")
         private Integer id;
         private String name;
     }

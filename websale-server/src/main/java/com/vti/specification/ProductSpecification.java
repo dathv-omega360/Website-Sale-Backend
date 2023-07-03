@@ -23,6 +23,18 @@ public class ProductSpecification {
                         criteriaBuilder.like(root.get("category").get("name"), pattern)
                 ));
             }
+            if (form.getMinprice() != null) {
+                predicates.add(criteriaBuilder.greaterThanOrEqualTo(
+                        root.get("totalMembers"),
+                        form.getMinprice()
+                ));
+            }
+            if (form.getMaxprice() != null) {
+                predicates.add(criteriaBuilder.lessThanOrEqualTo(
+                        root.get("totalMembers"),
+                        form.getMaxprice()
+                ));
+            }
             return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
         };
     }
