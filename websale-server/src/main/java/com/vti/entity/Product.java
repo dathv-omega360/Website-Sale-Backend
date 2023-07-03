@@ -53,6 +53,6 @@ public class Product {
     @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)
     private Category category;
 
-//    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
-//    private List<Cart> carts;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<Cart> carts;
 }
